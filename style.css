@@ -40,6 +40,14 @@ header{
     height: 100%;
     width: 30px;
 }
-
+.btn{
+    padding:.5rem 1rem;
+    border: 1px solid #000;
+    border-radius: .5rem;
+    transition: all 1s;
+}
+.btn:hover{
+    box-shadow: 1px 1px 5px #000;
+}
 
 
