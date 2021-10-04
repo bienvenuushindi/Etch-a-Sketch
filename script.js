@@ -27,4 +27,3 @@ function createGrid(element,number){
 
 }
 
-console.log(createGrid('div',16));
