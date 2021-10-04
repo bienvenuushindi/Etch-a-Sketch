@@ -8,6 +8,19 @@ body{
     background-color: #b9b9b9;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+header{
+    margin: 1rem auto;
+    font-size: 3rem;
+}
+.main{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.menu{
+    margin: auto 1rem;
 }
 .container{
     width: 480px;
@@ -15,6 +28,7 @@ body{
     background-color: white;
     display: flex;
     flex-direction: column;
+
 }
 .row{
     display: flex;
