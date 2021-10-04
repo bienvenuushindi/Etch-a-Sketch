@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+body{
+    background-color: #b9b9b9;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 480px;
+    height: 480px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 100%;
+}
+.column{
+    height: 100%;
+    width: 30px;
+}
+
+
+
