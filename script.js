@@ -13,7 +13,7 @@ function addElementTo(container,className,element,number) {
         i++;
     }
 }
-function createGrid(element,number){
+function setGrid(element,number){
     addElementTo('.container','row',element,number);
     document.querySelectorAll('.row').forEach((item)=>{
         let i=0;
@@ -25,4 +25,18 @@ function createGrid(element,number){
         }
     })
 
+}
+setGrid('div',16);
+const COLUMNS=document.querySelectorAll('.column');
+COLUMNS.forEach((column)=>{
+    column.addEventListener('mouseover',()=>{
+        setColor(column);
+    })
+});
+
+function setColor(column) {
+    let red=Math.floor((Math.random() * 255) + 1);
+    let green=Math.floor((Math.random() * 255) + 1);
+    let blue=Math.floor((Math.random() * 255) + 1);
+    column.style.backgroundColor='rgb(' + [red,green,blue].join(',') + ')';
 }
