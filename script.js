@@ -26,4 +26,3 @@ function createGrid(element,number){
     })
 
 }
-
