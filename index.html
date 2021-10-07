@@ -6,16 +6,23 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <header>
-      <h1>Etch-a-sketch</h1>
-  </header>
-  <div class="main">
-      <div class="menu">
-          <button id="clear" class=" btn">Clear</button>
-      </div>
-      <div class="container"></div>
-  </div>
+<header>
+    <h1>Etch-a-sketch</h1>
+    <div class="menu">
+        <button id="clear" type="button" class=" btn">Clear</button>
+        <button id="eraser" type="button" class=" btn">Eraser</button>
+        <button id="rainbow" type="button" class=" btn">Rainbow</button>
+        <button id="black" type="button" class=" btn">Black</button>
+        <button id="gray_scale" type="button" class=" btn">Gray scale</button>
+        <label for="favcolor">Pick</label><input type="color" id="favcolor" class=" btn" name="favcolor"
+                                                 value="#ff0000">
+    </div>
+</header>
+<div class="main">
 
-  <script type="text/javascript" src="script.js"></script>
+    <div class="container"></div>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
