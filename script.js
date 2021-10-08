@@ -90,14 +90,14 @@ function scaleGray(column,r,g,b) {
 document.querySelectorAll('.btn').forEach((btn)=>{
     btn.addEventListener('click',(e)=>{
 
-            if(e.target.id === MODE[0])   setMode(MODE[0]);
-            if(e.target.id ===  MODE[1])  setMode( MODE[1]);
-            if(e.target.id === MODE[2])   setMode(MODE[2]);
-            if(e.target.id === MODE[3])   clear();
-            if(e.target.id === MODE[4])  {
+            if(btn.id === MODE[0])   setMode(MODE[0]);
+            if(btn.id  ===  MODE[1])  setMode( MODE[1]);
+            if(btn.id === MODE[2])   setMode(MODE[2]);
+            if(btn.id === MODE[3])   clear();
+            if(btn.id  === MODE[4])  {
                 setMode(MODE[4]);
             }
-            if (e.target.id===MODE[5]){
+            if (btn.id ===MODE[5]){
                 defaultColor=PICK_COLOR.value;
                 console.log(defaultColor);
                 setMode(MODE[5]);
@@ -105,12 +105,11 @@ document.querySelectorAll('.btn').forEach((btn)=>{
          
     })
 });
-PICK_COLOR.addEventListener("click", ()=>{
-   pickColorHandler()
-}, false);
-PICK_COLOR.addEventListener("input", ()=>{
-    pickColorHandler()
-}, false);
+["click","input"].forEach((evt)=>{
+    PICK_COLOR.addEventListener(evt, ()=>{
+        pickColorHandler()
+    }, false);
+})
 function  pickColorHandler() {
     setMode(MODE[5]);
     defaultColor=PICK_COLOR.value;
@@ -122,4 +121,3 @@ function launch(gridNumber,columnSize) {
 }
 
 launch(DEFAULT_GRID_NUMBER,columnSize);
-
